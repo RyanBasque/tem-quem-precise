@@ -4,6 +4,10 @@ import { color } from './../../../assets/css/colors';
 export const HowToHelpWrapper = styled.div`
   margin-top: 10rem;
 
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+  }
+
   h1 {
     font-size: 2.5rem;
     font-weight: 700;

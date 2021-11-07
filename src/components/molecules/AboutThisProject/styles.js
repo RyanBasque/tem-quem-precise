@@ -10,6 +10,11 @@ export const AboutContainer = styled.div`
   }
 
   margin-top: 10rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -17,6 +22,11 @@ export const AboutContainer = styled.div`
     color: ${color.orange};
 
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
 
   p {
@@ -24,6 +34,11 @@ export const AboutContainer = styled.div`
     color: ${color.gray};
 
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   img {
