@@ -4,6 +4,10 @@ import { color } from './../../../assets/css/colors';
 export const ApresentationContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -15,7 +19,7 @@ export const ImageContainer = styled.div`
 
   img {
     width: 100%;
-    max-width: 600px;
+    max-width: 530px;
     height: 100%;
 
     object-fit: cover;
@@ -62,11 +66,13 @@ export const TextContainer = styled.div`
   }
 
   p {
+    text-align: center;
     font-size: 15px;
     color: ${color.black};
   }
 
   h1 {
+    text-align: center;
     font-size: 23px;
     line-height: 23px;
     font-weight: bold;
