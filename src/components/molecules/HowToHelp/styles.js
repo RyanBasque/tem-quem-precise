@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { color } from './../../../assets/css/colors';
 
 export const HowToHelpWrapper = styled.div`
-  margin-top: 4rem;
+  margin-top: 10rem;
 
   h1 {
     font-size: 2.5rem;
