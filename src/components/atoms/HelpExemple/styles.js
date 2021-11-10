@@ -37,9 +37,8 @@ export const HelpContainer = styled.div`
 
     p {
       font-size: 0.8rem;
-      font-weight: bold;
       text-align: center;
-      color: ${color.gray};
+      color: ${color.black};
 
       margin: 10px 0;
     }

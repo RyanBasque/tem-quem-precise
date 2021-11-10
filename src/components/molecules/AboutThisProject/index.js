@@ -7,17 +7,17 @@ import Slide from '../../../assets/images/food.svg';
 const AboutThisProject = () => {
   return (
     <AboutContainer>
-      <div>
+      <div data-aos="fade-up">
         <h1>Sobre esse projeto</h1>
         <p>
-          Esse é um projeto desenvolvido para o Global Solution da FIAP, faculdade que
+          Esse é um projeto desenvolvido para o Global Impact da FIAP, faculdade que
           estimula mentes a vivenciarem a inovação e o empreendedorismo. <br />
           Os integrantes do projeto são: Ryan Basque (RM89176), <br />
-          Gustavo Carneiro (RM88392), Debora Toniatte (RM86829) e
+          Gustavo Carneiro (RM88392), Debora Toniate Medeiros (RM86829) e 
           Matheus Correa (RM88286).
         </p>
       </div>
-      <img src={Slide} alt="Slide" />
+      <img src={Slide} alt="Slide" data-aos="fade-up" />
     </AboutContainer>
   );
 };
