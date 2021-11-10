@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 import './App.css';
 
-import Home from '../pages/Home';
+import Routes from '../pages/Home';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Fragment>
-      <Home />
+      <Routes />
     </Fragment>
   );
 }
