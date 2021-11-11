@@ -8,7 +8,8 @@ export const StyledHeaderBar = styled.header`
 
   width: 100%;
 
-  display: flex;
+  display:  ${({ showHeader }) => showHeader ? 'flex' : 'none'};
+
   justify-content: flex-end;
   align-items: center;
 
