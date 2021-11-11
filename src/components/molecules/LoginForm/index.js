@@ -7,7 +7,7 @@ import { LoginContainer, Form, ImageContainer } from './styles';
 
 import loginImage from '../../../assets/images/login.svg';
 
-const LoginForm = ({ email, onChangeEmail, password, onChangePassword }) => {
+const LoginForm = ({ email, onChangeEmail, password, onChangePassword, onSendData }) => {
 
   return (
     <LoginContainer>
@@ -31,7 +31,7 @@ const LoginForm = ({ email, onChangeEmail, password, onChangePassword }) => {
             />
           </fieldset>
           <Link to="/" data-aos="fade-up-left">Não sou cadastrado</Link>
-          <button data-aos="fade-up-left">Entrar</button>
+          <button onClick={onSendData} data-aos="fade-up-left">Entrar</button>
         </Form>
       </div>
       <ImageContainer data-aos="flip-up">
