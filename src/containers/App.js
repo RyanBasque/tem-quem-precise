@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 import './App.css';
 
-import Routes from '../pages/Home';
+import Routes from '../routes/routes';
 
 function App() {
 

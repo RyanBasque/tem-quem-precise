@@ -1,13 +1,23 @@
 import React from "react";
-import { Route, BrowserRouter } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    useRoutes,
+  } from "react-router-dom";
 
 import Home from "../pages/Home";
 
 const Routes = () => {
+    const AppRoutes = () => {
+        const routes = useRoutes([
+            { path: '/', element: <Home /> },
+        ]);
+        return routes;
+    };
+
    return(
-       <BrowserRouter>
-           <Route component={Home}  path="/" exact />
-       </BrowserRouter>
+    <Router>
+      <AppRoutes />
+    </Router>
    )
 }
 
