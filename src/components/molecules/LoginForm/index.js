@@ -30,7 +30,7 @@ const LoginForm = ({ email, onChangeEmail, password, onChangePassword, onSendDat
               placeholder="Senha" 
             />
           </fieldset>
-          <Link to="/" data-aos="fade-up-left">Não sou cadastrado</Link>
+          <Link to="/signup" data-aos="fade-up-left">Não sou cadastrado</Link>
           <button onClick={onSendData} data-aos="fade-up-left">Entrar</button>
         </Form>
       </div>

@@ -4,13 +4,15 @@ import {
     useRoutes,
   } from "react-router-dom";
 
-import { Home, Login } from "../pages";
+import { Home, Login, SignUp } from "../pages";
 
 const Routes = () => {
     const AppRoutes = () => {
       const routes = useRoutes([
+        { path: '*', element: <h1>404</h1> },
         { path: '/', element: <Home /> },
         { path: '/login', element: <Login /> },
+        { path: '/signup', element: <SignUp /> },
       ]);
 
       return routes;
