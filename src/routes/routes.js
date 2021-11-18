@@ -4,7 +4,13 @@ import {
     useRoutes,
   } from "react-router-dom";
 
-import { Home, Login, SignUp, ItemRegistration } from "../pages";
+import { 
+  Home,
+  Login,
+  SignUp,
+  ItemRegistration,
+  ItemView 
+} from "../pages";
 
 const Routes = () => {
     const AppRoutes = () => {
@@ -14,6 +20,7 @@ const Routes = () => {
         { path: '/login', element: <Login /> },
         { path: '/signup', element: <SignUp /> },
         { path: '/item', element: <ItemRegistration /> },
+        { path: '/view', element: <ItemView /> },
       ]);
 
       return routes;
