@@ -2,7 +2,7 @@ import React, { Fragment, memo } from 'react';
 
 import { StyledInput } from './styles';
 
-const FormInput = ({ type, placeholder, name, change }) => {
+const FormInput = ({ type="text", placeholder, name, change }) => {
   return (
     <Fragment>
       <StyledInput 

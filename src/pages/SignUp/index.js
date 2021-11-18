@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 
 import { SignUpForm } from './../../components/molecules';
 import { PageDefault } from './../../components/organisms';
-import { postLogin } from './../../services/login';
 
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      postLogin('opa', { email, password });
     } catch (e) {
       console.error(e);
     }
@@ -30,4 +28,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
