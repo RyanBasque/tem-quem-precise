@@ -7,8 +7,7 @@ import { SignContainer, Form, ImageContainer, RadioButton } from './styles';
 
 import loginImage from '../../../assets/images/login.svg';
 
-const SignUpForm = ({ email, onChangeEmail, password, onChangePassword, onSendData }) => {
-  const[isOng, setIsOng] = React.useState(false);
+const SignUpForm = ({ email, onChangeEmail, password, onChangePassword, onSendData, ong, setOng }) => {
 
   return (
     <SignContainer>
@@ -41,8 +40,8 @@ const SignUpForm = ({ email, onChangeEmail, password, onChangePassword, onSendDa
           </fieldset>
           <RadioButton data-aos="fade-left">
             <label>Você representa uma ONG? <br /> (sim para ONG, não para mercado)</label>
-            <input type="checkbox" name="ong" checked={isOng} onChange={() => setIsOng(!isOng)} /> 
-            { isOng ? 'Sim' : 'Não' }
+            <input type="checkbox" name="ong" checked={ong} onChange={() => setOng(!ong)} /> 
+            { ong ? 'Sim' : 'Não' }
           </RadioButton>
           <Link to="/login" data-aos="fade-up-left">Já tenho cadastro</Link>
           <button onClick={onSendData} data-aos="fade-up-left">Entrar</button>

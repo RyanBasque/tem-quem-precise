@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 import { Title, FormContainer } from './styles';
 
@@ -15,28 +17,55 @@ const ItemRegistration = () => {
     e.preventDefault();
     const itens = [];
 
-    if(!localStorage.getItem('itens')) {
-      itens.push({
-        number: number,
-        name: name.target.value,
-        branch: branch.target.value,
-        dueDate: dueDate.target.value
+    try {
+      if(!localStorage.getItem('itens')) {
+        itens.push({
+          number: number,
+          name: name.target.value,
+          branch: branch.target.value,
+          dueDate: dueDate.target.value
+        });
+
+        localStorage.setItem('itens', JSON.stringify(itens));
+      } else {
+        const data = JSON.parse(localStorage.getItem('itens'));
+
+        data.push({
+          number: number,
+          name: name.target.value,
+          branch: branch.target.value,
+          dueDate: dueDate.target.value
+        });
+
+        localStorage.setItem('itens', JSON.stringify(data));
+      }
+
+      setNumber(0);
+      setName('orra');
+      setBranch('');
+      setDueDate('');
+
+      toast('Item adicionado!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
 
-      localStorage.setItem('itens', JSON.stringify(itens));
-    } else {
-      const data = JSON.parse(localStorage.getItem('itens'));
-
-      data.push({
-        number: number,
-        name: name.target.value,
-        branch: branch.target.value,
-        dueDate: dueDate.target.value
-      });
-
-      localStorage.setItem('itens', JSON.stringify(data));
-
-    } 
+    } catch (error) {
+        toast('Ocorreu um erro! :(', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+    }
   }
 
   return (
@@ -75,6 +104,8 @@ const ItemRegistration = () => {
 
         <button onClick={postData}>Cadastrar</button>
       </FormContainer>
+
+      <Link to="/view">Ver itens adicionados</Link>
     </PageDefault>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Title } from './styles';
 
@@ -18,7 +19,7 @@ const ItemView = () => {
       <Title>Reserva de itens</Title>
 
       {
-        itens && itens.map(({ name, number, branch, dueDate }) => (
+        itens ? itens.map(({ name, number, branch, dueDate }) => (
           <CadastredItem 
             key={name}
             name={name}
@@ -26,7 +27,9 @@ const ItemView = () => {
             branch={branch}
             number={number}
           />
-        ))
+        )) : (
+          <Link to="/item">Adicionar itens</Link>
+        )
       }
     </PageDefault>
   )
